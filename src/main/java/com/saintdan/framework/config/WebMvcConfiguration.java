@@ -12,9 +12,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @since JDK1.8
  */
 @Configuration
-public class WebMvcConfiguration implements WebMvcConfigurer {
+public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
 
   @Override public void addInterceptors(InterceptorRegistry registry) {
+    super.addInterceptors(registry);
     registry.addInterceptor(logInterceptor);
   }
 
