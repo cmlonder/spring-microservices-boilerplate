@@ -68,7 +68,7 @@ public class LogUtils {
    */
   public static String generateTraceString(String errorMsg, Throwable e) {
     StringWriter w = new StringWriter();
-    w.append("Message is: ").append(errorMsg);
+    w.append("Message is: ");
     PrintWriter out = new PrintWriter(w);
     if (!StringUtils.isEmpty(errorMsg)) {
       out.println(errorMsg);
